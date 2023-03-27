@@ -1,0 +1,44 @@
+﻿<Page x:Class="itogLAB.AdmUsers"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:itogLAB"
+      mc:Ignorable="d" 
+      d:DesignHeight="400" d:DesignWidth="1110"
+      Title="AdmUsers">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <DataGrid x:Name="roleGrid" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Margin="10" SelectionChanged="role_SelectionChanged" CanUserAddRows="False"/>
+        <TextBox x:Name="role" Margin="4" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" materialDesign:HintAssist.Hint="Роль" Height="30"/>
+        <TextBlock x:Name="errorRole" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3" Margin="4"/>
+        <Button x:Name="insertRole" Grid.Column="0" Content="Добавить" Margin="10" Grid.Row="3" Click="insertRole_Click" />
+        <Button x:Name="updataRole" Grid.Column="1" Content="Изменить" Margin="10" Grid.Row="3" Click="updataRole_Click" />
+        <Button x:Name="deleteRole" Grid.Column="2" Content="Удалить" Margin="10" Grid.Row="3" Click="deleteRole_Click" />
+
+        <DataGrid x:Name="autGrid" Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="3" Margin="10" SelectionChanged="aut_SelectionChanged" CanUserAddRows="False"/>
+        <TextBox x:Name="log" Margin="4" Grid.Row="1" Grid.Column="3" materialDesign:HintAssist.Hint="Логин" Height="30"/>
+        <TextBox x:Name="pas" Margin="4" Grid.Row="1" Grid.Column="4" materialDesign:HintAssist.Hint="Пароль" Height="30"/>
+        <ComboBox x:Name="userBox" Grid.Row="1" Grid.Column="5"/>
+        <TextBlock x:Name="errorAut" Grid.Column="3" Grid.Row="2" Grid.ColumnSpan="3" Margin="4"/>
+        <Button x:Name="insertAut" Grid.Column="3" Content="Добавить" Margin="10" Grid.Row="3" Click="insertAut_Click"/>
+        <Button x:Name="updataAut" Grid.Column="4" Content="Изменить" Margin="10" Grid.Row="3" Click="updataAut_Click_1" />
+        <Button x:Name="deleteAut" Grid.Column="5" Content="Удалить" Margin="10" Grid.Row="3" Click="deleteAut_Click_1"/>
+    </Grid>
+   
+</Page>

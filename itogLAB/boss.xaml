@@ -1,0 +1,33 @@
+﻿<Window x:Class="itogLAB.boss"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:itogLAB"
+        mc:Ignorable="d"
+        Title="boss" Height="600" Width="1111">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="33"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Button Content="Данные фермы" Grid.Column="0" Click="dataFarmClick" Grid.Row="0" Style="{StaticResource MaterialDesignPaperButton}"/>
+        <Button Content="Продукция" Grid.Column="2" Click="productClick" Grid.Row="0" Style="{StaticResource MaterialDesignPaperButton}"/>
+        <Button Content="Пользователи" Grid.Column="4" Click="usersClick" Grid.Row="0" Style="{StaticResource MaterialDesignPaperButton}"/>
+        <Button Content="Чеки" Grid.Column="6" Click="CheckClick" Grid.Row="0" Style="{StaticResource MaterialDesignPaperButton}"/>
+        <Button Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="3" Content="Вы в меню администратора. Здесь можно оформить заказ." 
+                   FontFamily="Century Gothic" FontSize="16" FontWeight="Black" Click="Button_Click"/>
+        <Frame x:Name="pageNew" NavigationUIVisibility="Hidden" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="7"/>
+        <Button x:Name="authorReturn" Grid.Column="6" Content="Вернуться к авторизации" Grid.Row="1" Click="authorReturn_Click" Height="32" Margin="0,1,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
